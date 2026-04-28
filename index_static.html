@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="COP 32 Ethiopia — UN Climate Change Conference 2028. Unifying for our planet through climate action.">
+    <title>COP 32 Ethiopia — UN Climate Change Conference 2028</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display+SC:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        :root {
+            --primary: #2d6a4f;
+            --navy: #6a4f2d;
+            --bg: #ffffff;
+            --text: #24364a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg) !important;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-bar {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        .header-bar.is-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 0 0 20px 20px;
+        }
+
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        .header-cta {
+            background: #c9a14d;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .header-cta:hover {
+            background: #b8923d;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 4vh; /* Nudging up from the user's 7vh */
+            background: #ffffff !important;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: url('mount land.png') center / cover no-repeat;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, 
+                rgba(255, 255, 255, 0.95) 0%, 
+                rgba(255, 255, 255, 0.8) 25%, 
+                rgba(255, 255, 255, 0) 60%);
+            z-index: 1;
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+            padding: 0;
+            margin-left: 8%;
+            width: 500px;
+            text-align: left;
+        }
+
+        .hero-mini {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .hero-mini-rule {
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .hero-logo {
+            display: block;
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.05));
+        }
+
+        .hero-message h2 {
+            font-size: 1.2rem;
+            font-family: 'Playfair Display SC', serif;
+            color: var(--navy);
+            margin: 0 0 15px;
+            line-height: 1.1;
+        }
+
+        .hero-message p {
+            font-size: 1.2rem;
+            color: var(--text);
+            opacity: 0.8;
+            margin-bottom: 35px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--navy);
+            color: var(--navy);
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .framework-heading {
+            font-size: 2.2rem;
+            font-family: 'Playfair Display SC', serif;
+            color: var(--navy);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .framework-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            color: var(--text);
+            opacity: 0.8;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .framework-card {
+            padding: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .framework-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-content {
+            padding: 0;
+            background: transparent;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text);
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .framework-card-title {
+            padding: 0;
+            font-size: 1.4rem;
+            color: var(--navy);
+            font-family: 'Playfair Display SC', serif;
+            font-weight: 900;
+            margin-top: 15px;
+            border: none;
+        }
+
+        .stat-desc {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--navy);
+        }
+
+        .stat-desc {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--navy);
+        }
+
+        /* Green Legacy Section */
+        .green-legacy-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .green-legacy-image img {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 8px solid rgba(45, 106, 79, 0.05);
+            box-shadow: 0 40px 80px rgba(18, 40, 72, 0.12);
+        }
+
+        .green-legacy-content h2 {
+            font-size: 2.8rem;
+            font-family: 'Playfair Display SC', serif;
+            color: var(--navy);
+            margin-bottom: 25px;
+            line-height: 1.1;
+        }
+
+        .green-legacy-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 40px;
+            opacity: 0.85;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: 1200px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .stat-card {
+            background: #f8fbf9;
+            padding: 24px;
+            border-radius: 16px;
+            border-bottom: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(45, 106, 79, 0.08);
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .stat-title {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        .stat-title {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        /* Agriculture Section */
+        .hanging-wrap {
+            position: relative;
+            padding-top: 50px;
+        }
+
+        .teff-hang-line {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            width: 1px;
+            height: 150px;
+            background: linear-gradient(to bottom, transparent, var(--navy));
+            opacity: 0.15;
+            transform: translateX(-50%);
+        }
+
+        .teff-item {
+            /* Animation removed as requested */
+            transform-origin: center -50px;
+        }
+
+        .teff-item img {
+            width: 100%;
+            max-width: 450px;
+            filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.12));
+        }
+
+        @keyframes swing {
+            from {
+                transform: rotate(-2deg);
+            }
+
+            to {
+                transform: rotate(2deg);
+            }
+        }
+
+        /* Energy Pillars Section */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .pillar-item {
+            text-align: center;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .pillar-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pillar-image img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .pillar-item h3 {
+            font-size: 1.6rem;
+            font-family: 'Playfair Display SC', serif;
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .pillar-item p {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.7;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        @media (max-width: 992px) {
+            .framework-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero::before {
+                left: 0;
+                opacity: 0.3;
+            }
+
+            .hero-copy {
+                width: 100%;
+                padding: 0 40px;
+                text-align: center;
+            }
+
+            .hero-logo {
+                margin: 0 auto 25px;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-mini {
+                justify-content: center;
+            }
+
+            .split-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .green-legacy-content {
+                text-align: center;
+            }
+
+            .stats-grid,
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Contact Section */
+        .contact-section {
+            background-color: #f9fbfb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .contact-info-box h2 {
+            font-size: 2.8rem;
+            font-family: 'Playfair Display SC', serif;
+            color: var(--navy);
+            margin-bottom: 25px;
+        }
+
+        .contact-info-box p {
+            font-size: 1.1rem;
+            color: var(--text);
+            opacity: 0.8;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .info-detail {
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .info-item i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(45, 106, 79, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e1e8e5;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8fbf9;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #1b4332;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(45, 106, 79, 0.2);
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .contact-info-box {
+                text-align: center;
+            }
+            
+            .info-item, .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header" id="site-header">
+        <div class="header-bar" id="header-bar">
+            <div class="brand">
+                <a href="#home">
+                    <img src="cop32_logo.png" alt="COP 32" style="height: 50px;">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#about">Framework</a>
+                <a href="#initiatives">Initiatives</a>
+                <a href="#energy">Pillars</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#register" class="header-cta">REGISTER NOW</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-copy">
+
+                <img src="cop32_logo.png" alt="COP 32 Ethiopia" class="hero-logo">
+                <div class="hero-message">
+                    <h2>Unifying For Our Planet.</h2>
+                    <p>Driving Ambition, Climate Action, and Sustainable Solutions.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="#agenda" class="btn btn-primary">Explore The Agenda</a>
+                    <a href="#live" class="btn btn-secondary">Watch Live</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding">
+            <div class="container">
+                <h2 class="framework-heading">FRAMEWORK FOR ACTION</h2>
+                <p class="framework-intro">Our comprehensive plan to unite the world through concrete climate solutions,
+                    innovation, and inclusive policy frameworks designed for lasting impact.</p>
+
+            </div>
+        </section>
+
+        <section id="green-legacy" class="section-padding" style="background-color: #ffffff;">
+            <div class="container">
+                <div class="green-legacy-split">
+                    <div class="green-legacy-content">
+                        <h2>ETHIOPIA'S GREEN LEGACY INITIATIVE</h2>
+                        <p>Launched in 2019, the Green Legacy Initiative is Ethiopia's ambitious answer to the global
+                            climate crisis. By mobilizing millions of citizens to restore degraded landscapes, we are
+                            building a climate-resilient green economy for future generations.</p>
+
+                        <p>Our mission extends beyond planting trees; it is about restoring hope, ensuring food security,
+                            and positioning Ethiopia as a global leader in environmental stewardship.</p>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-value">47B+</span>
+                                <span class="stat-title">Seedlings Planted</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">23.6%</span>
+                                <span class="stat-title">Forest Coverage</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">20M+</span>
+                                <span class="stat-title">Active Participants</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">2030 Goal</span>
+                                <span class="stat-title">22M Ha Restored</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="green-legacy-image">
+                        <img src="green.jpeg" alt="Ethiopian Green Legacy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="energy" class="section-padding" style="background-color: #f2f7f4;">
+            <div class="container">
+                <h2 class="framework-heading">KEY ENERGY PILLARS</h2>
+                <p class="framework-intro">Ethiopia's clean energy leadership is anchored in a diverse portfolio of
+                    renewable sources that power our national grid and support regional development.</p>
+
+                <div class="pillars-grid">
+                    <div class="pillar-item anim-fade-up" style="transition-delay: 0.1s;">
+                        <div class="pillar-image">
+                            <img src="dam.jpg" alt="Hydropower">
+                        </div>
+                        <h3>HYDROPOWER</h3>
+                        <p>Leveraging our vast water resources to generate consistent, carbon-free energy while
+                            supporting water management and regional electricity security.</p>
+                    </div>
+                    <div class="pillar-item anim-fade-up" style="transition-delay: 0.2s;">
+                        <div class="pillar-image">
+                            <img src="wind.jpg" alt="Wind Energy">
+                        </div>
+                        <h3>WIND ENERGY</h3>
+                        <p>Harnessing persistent winds across the Great Rift Valley with modern turbine farms to provide
+                            reliable additions to our energy mix.</p>
+                    </div>
+                    <div class="pillar-item anim-fade-up" style="transition-delay: 0.3s;">
+                        <div class="pillar-image">
+                            <img src="solar.jpg" alt="Solar Energy">
+                        </div>
+                        <h3>SOLAR POWER</h3>
+                        <p>Capitalizing on our exceptional year-round sunlight exposure to power communities through
+                            expansive photovoltaic fields and rural networks.</p>
+                    </div>
+                </div>
+            </div>
+            <section id="agriculture" class="section-padding" style="background-color: #ffffff; overflow: hidden;">
+                <div class="container">
+                    <div class="green-legacy-split">
+                        <div class="hanging-wrap">
+                            <div class="teff-hang-line"></div>
+                            <div class="teff-item">
+                            <video autoplay loop muted playsinline class="teff-video" style="width: 100%; max-width: 550px; border-radius: 20px; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.12));">
+                                <source src="teff video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        </div>
+                        <div class="green-legacy-content">
+                            <h2>CLIMATE-SMART AGRICULTURE</h2>
+                            <p>Teff is not only the foundation of Ethiopian nutrition but a resilient crop that
+                                represents our commitment to food security. Through climate-smart practices, we are
+                                ensuring that agriculture remains a sustainable engine of growth, adapting to new
+                                environmental realities while preserving our rich heritage.</p>
+
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <span class="stat-value">6.5M+</span>
+                                    <span class="stat-title">Farmers Supported</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-value">12.5%</span>
+                                    <span class="stat-title">Yield Increase</span>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-value">Zero</span>
+                                    <span class="stat-title">Carbon Tillage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section-padding contact-section">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-info-box anim-fade-up">
+                            <h2>GET IN TOUCH</h2>
+                            <p>Have questions about COP32 Ethiopia? Reach out to our dedicated team for information
+                                regarding registration, partnerships, or conference logistics.</p>
+
+                            <div class="info-detail">
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Addis Ababa, Ethiopia</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>contact@cop32ethiopia.org</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+251 11 123 4567</span>
+                                </div>
+                            </div>
+
+                            <div class="social-links">
+                                <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="contact-form anim-fade-up">
+                            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent! (Demo Only)');">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="example@domain.com"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" name="subject" placeholder="How can we help?"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" placeholder="Your message here..."
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn-submit">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header-bar');
+            if (window.scrollY > 50) {
+                header.classList.add('is-scrolled');
+            } else {
+                header.classList.remove('is-scrolled');
+            }
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: stop observing once shown
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.anim-fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
